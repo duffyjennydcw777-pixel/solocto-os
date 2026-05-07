@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Analytics: Plausible (privacy-friendly, no cookies, GDPR compliant) -->
+    <script defer data-domain="duffyjennydcw777-pixel.github.io" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
     <div class="grain"></div>
@@ -157,19 +159,40 @@
                     <li>✅ Lifetime updates</li>
                 </ul>
                 <div class="buy-methods">
-                    <h4>How to buy:</h4>
-                    <a href="https://t.me/solocto_os_bot" class="btn btn-primary" id="btn-buy-tg">🤖 Buy via Telegram Bot — Auto Delivery</a>
-                    <p class="buy-note">1. Start the bot → 2. Send $149 USDT (TRC-20) → 3. Send txid → 4. Get ZIP instantly</p>
+                    <h4>Choose your path:</h4>
                     
-                    <div class="crypto-payment-info" style="display: flex; align-items: center; gap: 15px; margin-top: 20px; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px;">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=TE18CRGjhC5Woag4gKjH8VUTDaN7iDxr4W" alt="USDT TRC-20 QR Code" style="border-radius: 4px; border: 2px solid var(--border);">
-                        <div>
-                            <p style="margin: 0 0 5px 0; font-size: 0.9rem; color: var(--text-secondary);">USDT Address (TRC-20):</p>
-                            <code id="usdt-address" style="word-break: break-all;">TE18CRGjhC5Woag4gKjH8VUTDaN7iDxr4W</code>
+                    <!-- PRIMARY: CryptoCloud automated checkout -->
+                    <a href="http://92.246.137.35:8001/api/v1/checkout/solocto" class="btn btn-primary" id="btn-buy-crypto" onclick="plausible('CTA-Buy-CryptoCloud')">
+                        💳 Buy Now — $149 (Card & Crypto)
+                    </a>
+                    <p class="buy-note">Secure checkout. USDT, BTC, ETH, USDC, and 20+ cryptocurrencies. Visa/MC via exchange.</p>
+
+                    <!-- SECONDARY: Prompt Kit -->
+                    <a href="http://92.246.137.35:8001/api/v1/checkout/promptkit" class="btn btn-secondary" id="btn-buy-promptkit" style="margin-top: 10px; background: rgba(255,255,255,0.08); border: 1px solid var(--border);" onclick="plausible('CTA-PromptKit')">
+                        📝 Start Small: Prompt Kit — $9
+                    </a>
+                    <p class="buy-note">5 rule files + 25 prompts. Works with any AI tool. Upgrade to full OS anytime.</p>
+
+                    <!-- TERTIARY: Telegram Bot -->
+                    <a href="https://t.me/solocto_os_bot" class="btn btn-secondary" id="btn-buy-tg" style="margin-top: 10px; background: rgba(255,255,255,0.05); border: 1px solid var(--border);" onclick="plausible('CTA-Buy-Telegram')">
+                        🤖 Buy via Telegram Bot — Instant Delivery
+                    </a>
+                    <p class="buy-note">Send USDT (TRC-20) → send txid → get ZIP instantly.</p>
+
+                    <!-- Manual USDT fallback -->
+                    <details style="margin-top: 20px; cursor: pointer;">
+                        <summary style="color: var(--text-secondary); font-size: 0.9rem;">🔐 Manual USDT transfer</summary>
+                        <div style="display: flex; align-items: center; gap: 15px; margin-top: 10px; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px;">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=TE18CRGjhC5Woag4gKjH8VUTDaN7iDxr4W" alt="USDT TRC-20 QR Code" style="border-radius: 4px; border: 2px solid var(--border);">
+                            <div>
+                                <p style="margin: 0 0 5px 0; font-size: 0.9rem; color: var(--text-secondary);">USDT (TRC-20):</p>
+                                <code id="usdt-address" style="word-break: break-all; font-size: 0.75rem;">TE18CRGjhC5Woag4gKjH8VUTDaN7iDxr4W</code>
+                                <p style="margin: 5px 0 0 0; font-size: 0.8rem; color: var(--text-secondary);">After sending, DM <a href="https://t.me/IrattaRazma" style="color:var(--accent)">@IrattaRazma</a> with txid</p>
+                            </div>
                         </div>
-                    </div>
+                    </details>
                     
-                    <p class="buy-note" style="margin-top: 15px;">Questions: <a href="https://t.me/IrattaRazma" style="color:var(--accent)">@IrattaRazma</a></p>
+                    <p class="buy-note" style="margin-top: 15px;">Questions? <a href="https://t.me/IrattaRazma" style="color:var(--accent)">@IrattaRazma on Telegram</a></p>
                 </div>
             </div>
         </div>
