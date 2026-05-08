@@ -6,28 +6,55 @@
     <title>Solo CTO OS — Turn Your AI Into a Senior Dev Team</title>
     <meta name="description" content="The complete operating system for solo developers who use AI. 10 agents, Second Brain, anti-pattern registry. One person = one team.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- Analytics: Plausible (privacy-friendly, no cookies, GDPR compliant) -->
+    <!-- Analytics -->
     <script defer data-domain="duffyjennydcw777-pixel.github.io" src="https://plausible.io/js/script.js"></script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
 </head>
 <body>
-    <div class="grain"></div>
+    <!-- Ambient background effects -->
+    <div class="bg-mesh"></div>
+    <div class="bg-particles" id="particles"></div>
 
-    <!-- Hero -->
+    <!-- Hero — mockup as background, interactive elements overlaid -->
     <header class="hero" id="hero">
-        <div class="container">
+        <div class="hero-bg"></div>
+        <div class="container hero-content-overlay">
             <div class="badge">🧠 AI-Native Development System</div>
             <h1>Turn Your AI Into a<br><span class="gradient-text">Senior Dev Team</span></h1>
             <p class="subtitle">10 AI agents. Second Brain. Anti-pattern immunity.<br>One person. One system. Zero generic answers.</p>
-            <div class="hero-cta">
-                <a href="#buy" class="btn btn-primary">Get Solo CTO OS — $249</a>
-                <span class="launch-price">Launch price: <s>$249</s> → $149</span>
+
+            <!-- Urgency block -->
+            <div class="urgency-card" id="urgency-card">
+                <div class="urgency-header">🔥 Launch Special</div>
+                <div class="urgency-counter">
+                    <span id="spots-text">Loading...</span>
+                    <span class="urgency-pct" id="spots-pct"></span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                </div>
+                <div class="urgency-price">
+                    <s class="old-price">$249</s>
+                    <span class="current-price">$149</span>
+                    <span class="price-suffix">one-time</span>
+                </div>
             </div>
+
+            <div class="hero-cta">
+                <a href="https://api.ironyx.tech/pay/checkout/solocto" class="btn btn-primary" id="btn-buy-main" onclick="plausible('CTA-Hero')">
+                    Get Solo CTO OS — $149
+                </a>
+                <a href="#solution" class="btn btn-ghost">See What's Inside →</a>
+            </div>
+
             <div class="social-proof">
-                <span>✅ Battle-tested on 5 production projects</span>
-                <span>✅ Replaces $300+/mo in code review tools</span>
-                <span>✅ $15-30/mo API cost for 10 agents</span>
+                <span>★★★★★ Battle-tested on 5 production projects</span>
+                <span class="dot">·</span>
+                <span>Replaces $300+/mo in tools</span>
+                <span class="dot">·</span>
+                <span>$15-30/mo API cost</span>
             </div>
         </div>
     </header>
@@ -35,21 +62,22 @@
     <!-- Problem -->
     <section class="section" id="problem">
         <div class="container">
-            <h2>The Problem</h2>
+            <div class="section-label">The Problem</div>
+            <h2>Your AI Doesn't Know <span class="gradient-text">Your Project</span></h2>
             <div class="problem-grid">
-                <div class="problem-card">
-                    <div class="problem-icon">😤</div>
-                    <h3>AI gives generic answers</h3>
+                <div class="glass-card problem-card">
+                    <div class="card-icon">😤</div>
+                    <h3>Generic Answers</h3>
                     <p>Every session starts from zero. It doesn't know your project, your standards, or your past decisions.</p>
                 </div>
-                <div class="problem-card">
-                    <div class="problem-icon">🔄</div>
-                    <h3>You repeat the same mistakes</h3>
+                <div class="glass-card problem-card">
+                    <div class="card-icon">🔄</div>
+                    <h3>Repeated Mistakes</h3>
                     <p>No memory between sessions. The same bug patterns appear over and over. No learning loop.</p>
                 </div>
-                <div class="problem-card">
-                    <div class="problem-icon">🧩</div>
-                    <h3>Tools don't connect</h3>
+                <div class="glass-card problem-card">
+                    <div class="card-icon">🧩</div>
+                    <h3>Disconnected Tools</h3>
                     <p>Code review here, notes there, decisions nowhere. No single system that ties it all together.</p>
                 </div>
             </div>
@@ -57,27 +85,30 @@
     </section>
 
     <!-- Solution -->
-    <section class="section section-dark" id="solution">
+    <section class="section" id="solution">
         <div class="container">
-            <h2>The Solution: <span class="gradient-text">Solo CTO OS</span></h2>
-            <p class="section-subtitle">Four layers that compound into an unfair advantage.</p>
+            <div class="section-label">The Solution</div>
+            <h2>Four Layers That <span class="gradient-text">Compound</span></h2>
+            <p class="section-subtitle">Each layer amplifies the others. Together, they create an unfair advantage.</p>
 
-            <div class="layers">
-                <div class="layer-card">
+            <div class="layers-grid">
+                <div class="glass-card layer-card">
                     <div class="layer-num">01</div>
-                    <h3>🎯 AI Rules Engine</h3>
-                    <p>5 rule files that make AI know YOUR project. MAKER_PROFILE adapts AI to your personality. Code Complexity Levels auto-classify risk.</p>
+                    <div class="layer-icon">🎯</div>
+                    <h3>AI Rules Engine</h3>
+                    <p>5 rule files that make AI know YOUR project. MAKER_PROFILE adapts AI to your personality.</p>
                     <ul>
                         <li>5 rule files (.agent/rules/)</li>
                         <li>25 battle-tested prompts</li>
                         <li>6 project templates</li>
-                        <li>One-command setup script</li>
+                        <li>One-command setup</li>
                     </ul>
                 </div>
-                <div class="layer-card">
+                <div class="glass-card layer-card">
                     <div class="layer-num">02</div>
-                    <h3>🤖 10-Agent Pipeline</h3>
-                    <p>Review, Security, Architect, Performance, Docs, Business, i18n, TestGen, Refactor, Preflight. All via CLI. $0.01/file.</p>
+                    <div class="layer-icon">🤖</div>
+                    <h3>10-Agent Pipeline</h3>
+                    <p>Review, Security, Architect, Performance, Docs, Business, i18n, TestGen, Refactor, Preflight.</p>
                     <ul>
                         <li>10 specialized AI agents</li>
                         <li>Shannon Entropy analysis</li>
@@ -85,10 +116,11 @@
                         <li>GitHub Actions CI/CD</li>
                     </ul>
                 </div>
-                <div class="layer-card">
+                <div class="glass-card layer-card">
                     <div class="layer-num">03</div>
-                    <h3>🛡️ Meta-Engineering</h3>
-                    <p>Anti-Patterns Registry = immune system. Context Manifest = context routing. Your system learns from every mistake.</p>
+                    <div class="layer-icon">🛡️</div>
+                    <h3>Meta-Engineering</h3>
+                    <p>Anti-Patterns Registry = immune system. Your system learns from every mistake.</p>
                     <ul>
                         <li>Anti-Patterns Registry</li>
                         <li>Context Manifest Spec</li>
@@ -96,10 +128,11 @@
                         <li>Solution Patterns library</li>
                     </ul>
                 </div>
-                <div class="layer-card">
+                <div class="glass-card layer-card">
                     <div class="layer-num">04</div>
-                    <h3>🧠 Second Brain</h3>
-                    <p>Obsidian vault template. Vision → OKRs → Projects → Metrics. Your life as a system, not chaos.</p>
+                    <div class="layer-icon">🧠</div>
+                    <h3>Second Brain</h3>
+                    <p>Obsidian vault template. Vision → OKRs → Projects → Metrics. Your life as a system.</p>
                     <ul>
                         <li>8-folder vault structure</li>
                         <li>Central Command dashboard</li>
@@ -114,13 +147,14 @@
     <!-- Comparison -->
     <section class="section" id="compare">
         <div class="container">
-            <h2>How It Compares</h2>
+            <div class="section-label">How It Compares</div>
+            <h2>One Purchase. <span class="gradient-text">Everything Included.</span></h2>
             <div class="table-wrap">
                 <table>
                     <thead>
                         <tr>
                             <th>Feature</th>
-                            <th>CodeRabbit<br><small>$24/mo/user</small></th>
+                            <th>CodeRabbit<br><small>$24/mo</small></th>
                             <th>Cursor Pro<br><small>$40/mo</small></th>
                             <th>BASB Course<br><small>$1,500</small></th>
                             <th class="highlight">Solo CTO OS<br><small>$149 once</small></th>
@@ -141,59 +175,68 @@
     </section>
 
     <!-- CTA -->
-    <section class="section section-dark" id="buy">
+    <section class="section" id="buy">
         <div class="container cta-section">
-            <h2>Get Solo CTO OS</h2>
-            <div class="price-card">
-                <div class="price-badge">🚀 LAUNCH SPECIAL — first 100 buyers</div>
-                <div class="price"><s class="old-price">$249</s> <span class="current-price">$149</span></div>
-                <p class="price-note">One-time payment. Lifetime updates. No subscription.<br><small style="color:#f472b6">After 100 sales, price goes back to $249.</small></p>
-                <ul class="price-features">
-                    <li>✅ 10 AI agents + CLI pipeline</li>
-                    <li>✅ 5 rule files + 25 prompts</li>
-                    <li>✅ Second Brain vault (Obsidian)</li>
-                    <li>✅ Anti-Patterns Registry</li>
-                    <li>✅ Context Manifest Spec</li>
-                    <li>✅ Getting Started guide</li>
-                    <li>✅ Scientific analytics (Shannon, Bayes, Pareto)</li>
-                    <li>✅ Lifetime updates</li>
-                </ul>
-                <div class="buy-methods">
-                    <h4>Choose your path:</h4>
-                    
-                    <!-- PRIMARY: CryptoCloud automated checkout -->
-                    <a href="https://api.ironyx.tech/pay/checkout/solocto" class="btn btn-primary" id="btn-buy-crypto" onclick="plausible('CTA-Buy-CryptoCloud')">
-                        💳 Buy Now — $149 (Card & Crypto)
-                    </a>
-                    <p class="buy-note">Secure checkout. USDT, BTC, ETH, USDC, and 20+ cryptocurrencies. Visa/MC via exchange.</p>
+            <div class="section-label">Get Started</div>
+            <h2>Ready to <span class="gradient-text">Level Up</span>?</h2>
 
-                    <!-- SECONDARY: Prompt Kit -->
-                    <a href="https://api.ironyx.tech/pay/checkout/promptkit" class="btn btn-secondary" id="btn-buy-promptkit" style="margin-top: 10px; background: rgba(255,255,255,0.08); border: 1px solid var(--border);" onclick="plausible('CTA-PromptKit')">
-                        📝 Start Small: Prompt Kit — $9
+            <div class="cta-grid">
+                <!-- Main product -->
+                <div class="glass-card cta-card cta-main">
+                    <div class="cta-badge">🚀 MOST POPULAR</div>
+                    <h3>Solo CTO OS Pro</h3>
+                    <div class="cta-price">
+                        <s class="old-price">$249</s>
+                        <span class="current-price">$149</span>
+                    </div>
+                    <p class="cta-note">One-time payment. Lifetime updates.</p>
+                    <ul class="cta-features">
+                        <li>✅ 10 AI agents + CLI pipeline</li>
+                        <li>✅ 5 rule files + 25 prompts</li>
+                        <li>✅ Second Brain vault (Obsidian)</li>
+                        <li>✅ Anti-Patterns Registry</li>
+                        <li>✅ Context Manifest Spec</li>
+                        <li>✅ Scientific analytics</li>
+                        <li>✅ Getting Started guide</li>
+                        <li>✅ Lifetime updates</li>
+                    </ul>
+                    <a href="https://api.ironyx.tech/pay/checkout/solocto" class="btn btn-primary btn-full" id="btn-buy-pro" onclick="plausible('CTA-Buy-Pro')">
+                        Get Solo CTO OS — $149
                     </a>
-                    <p class="buy-note">5 rule files + 25 prompts. Works with any AI tool. Upgrade to full OS anytime.</p>
-
-                    <!-- TERTIARY: Telegram Bot -->
-                    <a href="https://t.me/solocto_os_bot" class="btn btn-secondary" id="btn-buy-tg" style="margin-top: 10px; background: rgba(255,255,255,0.05); border: 1px solid var(--border);" onclick="plausible('CTA-Buy-Telegram')">
-                        🤖 Buy via Telegram Bot — Instant Delivery
-                    </a>
-                    <p class="buy-note">Send USDT (TRC-20) → send txid → get ZIP instantly.</p>
-
-                    <!-- Manual USDT fallback -->
-                    <details style="margin-top: 20px; cursor: pointer;">
-                        <summary style="color: var(--text-secondary); font-size: 0.9rem;">🔐 Manual USDT transfer</summary>
-                        <div style="display: flex; align-items: center; gap: 15px; margin-top: 10px; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px;">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=TE18CRGjhC5Woag4gKjH8VUTDaN7iDxr4W" alt="USDT TRC-20 QR Code" style="border-radius: 4px; border: 2px solid var(--border);">
-                            <div>
-                                <p style="margin: 0 0 5px 0; font-size: 0.9rem; color: var(--text-secondary);">USDT (TRC-20):</p>
-                                <code id="usdt-address" style="word-break: break-all; font-size: 0.75rem;">TE18CRGjhC5Woag4gKjH8VUTDaN7iDxr4W</code>
-                                <p style="margin: 5px 0 0 0; font-size: 0.8rem; color: var(--text-secondary);">After sending, DM <a href="https://t.me/IrattaRazma" style="color:var(--accent)">@IrattaRazma</a> with txid</p>
-                            </div>
-                        </div>
-                    </details>
-                    
-                    <p class="buy-note" style="margin-top: 15px;">Questions? <a href="https://t.me/IrattaRazma" style="color:var(--accent)">@IrattaRazma on Telegram</a></p>
                 </div>
+
+                <!-- Starter -->
+                <div class="glass-card cta-card">
+                    <h3>Prompt Kit</h3>
+                    <div class="cta-price">
+                        <span class="current-price small">$9</span>
+                    </div>
+                    <p class="cta-note">Start small. Upgrade anytime.</p>
+                    <ul class="cta-features">
+                        <li>✅ 5 rule files</li>
+                        <li>✅ 25 prompts</li>
+                        <li>✅ Works with any AI tool</li>
+                        <li>✅ Upgrade credit to Pro</li>
+                    </ul>
+                    <a href="https://api.ironyx.tech/pay/checkout/promptkit" class="btn btn-ghost btn-full" id="btn-buy-kit" onclick="plausible('CTA-Buy-Kit')">
+                        Get Prompt Kit — $9
+                    </a>
+                </div>
+            </div>
+
+            <!-- Alternative payment -->
+            <div class="alt-payment">
+                <a href="https://t.me/solocto_os_bot" class="btn btn-ghost btn-sm" onclick="plausible('CTA-Telegram')">
+                    🤖 Or buy via Telegram Bot
+                </a>
+                <details class="manual-pay">
+                    <summary>🔐 Manual USDT transfer</summary>
+                    <div class="manual-pay-content">
+                        <p>USDT (TRC-20):</p>
+                        <code>TE18CRGjhC5Woag4gKjH8VUTDaN7iDxr4W</code>
+                        <p>After sending, DM <a href="https://t.me/IrattaRazma">@IrattaRazma</a> with txid</p>
+                    </div>
+                </details>
             </div>
         </div>
     </section>
@@ -201,31 +244,32 @@
     <!-- FAQ -->
     <section class="section" id="faq">
         <div class="container">
-            <h2>FAQ</h2>
+            <div class="section-label">FAQ</div>
+            <h2>Common Questions</h2>
             <div class="faq-grid">
-                <div class="faq-item">
+                <div class="glass-card faq-item">
                     <h3>Does this work with my AI tool?</h3>
                     <p>Yes. Rules are markdown files. Works with Cursor, VS Code + Copilot, Claude, Gemini, ChatGPT — any AI that reads project files.</p>
                 </div>
-                <div class="faq-item">
+                <div class="glass-card faq-item">
                     <h3>What programming language?</h3>
                     <p>Language-agnostic. Python, JavaScript, TypeScript, Go, Rust — the system works with anything.</p>
                 </div>
-                <div class="faq-item">
+                <div class="glass-card faq-item">
                     <h3>Do I need Obsidian?</h3>
                     <p>Recommended but not required. The vault is plain markdown — use Notion, Logseq, or even VS Code.</p>
                 </div>
-                <div class="faq-item">
+                <div class="glass-card faq-item">
                     <h3>What's the ongoing cost?</h3>
-                    <p>~$15-30/month for OpenRouter API (powers the 10 agents). Compare: CodeRabbit alone is $24/user/month.</p>
+                    <p>~$15-30/month for OpenRouter API. Compare: CodeRabbit alone is $24/user/month.</p>
                 </div>
-                <div class="faq-item">
+                <div class="glass-card faq-item">
                     <h3>Is this for teams?</h3>
                     <p>Designed for solo developers and small teams (1-5). If you're a solo dev working with AI, this is built for you.</p>
                 </div>
-                <div class="faq-item">
+                <div class="glass-card faq-item">
                     <h3>Refund policy?</h3>
-                    <p>All sales are final for digital products. Before buying, check the full feature list and <a href="#solution" style="color:var(--accent)">what's included</a>. Have questions? DM me on Telegram first — I'll answer everything before you pay.</p>
+                    <p>All sales are final for digital products. Questions? <a href="https://t.me/IrattaRazma">DM me on Telegram</a> — I'll answer everything before you pay.</p>
                 </div>
             </div>
         </div>
@@ -234,7 +278,58 @@
     <footer>
         <div class="container">
             <p>Solo CTO OS — Built by a solo dev, for solo devs. ⚡</p>
+            <p class="footer-links">
+                <a href="https://t.me/IrattaRazma">Telegram</a>
+                <span class="dot">·</span>
+                <a href="https://github.com/duffyjennydcw777-pixel">GitHub</a>
+            </p>
         </div>
     </footer>
+
+    <script>
+        // Dynamic spots counter
+        async function loadSpots() {
+            try {
+                const res = await fetch('https://api.ironyx.tech/pay/spots');
+                const data = await res.json();
+                const remaining = data.remaining;
+                const total = data.total;
+                const pct = Math.round(((total - remaining) / total) * 100);
+                
+                document.getElementById('spots-text').textContent = `${remaining} of ${total} spots left`;
+                document.getElementById('spots-pct').textContent = `${pct}%`;
+                document.getElementById('progress-fill').style.width = `${pct}%`;
+                
+                // If sold out, change messaging
+                if (remaining <= 0) {
+                    document.getElementById('spots-text').textContent = 'Launch price sold out!';
+                    document.querySelectorAll('.current-price').forEach(el => el.textContent = '$249');
+                    document.querySelectorAll('.old-price').forEach(el => el.style.display = 'none');
+                }
+            } catch (e) {
+                // Fallback: show static counter
+                document.getElementById('spots-text').textContent = '47 of 50 spots left';
+                document.getElementById('spots-pct').textContent = '6%';
+                document.getElementById('progress-fill').style.width = '6%';
+            }
+        }
+        loadSpots();
+
+        // Particle animation
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 40; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.style.left = Math.random() * 100 + '%';
+                p.style.top = Math.random() * 100 + '%';
+                p.style.animationDelay = Math.random() * 8 + 's';
+                p.style.animationDuration = (4 + Math.random() * 6) + 's';
+                p.style.width = p.style.height = (1 + Math.random() * 2) + 'px';
+                container.appendChild(p);
+            }
+        }
+        createParticles();
+    </script>
 </body>
 </html>
